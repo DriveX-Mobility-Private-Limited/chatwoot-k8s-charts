@@ -113,7 +113,7 @@ ingress:
               name: chatwoot
               port:
                 number: 3000
-  tls: []
+  tls:
    - secretName: chatwoot-prod-tls
      hosts:
        - crm.drivex.in
