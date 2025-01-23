@@ -128,7 +128,7 @@ postgresql:
   nameOverride: chatwoot-postgresql
   auth:
     username: postgres
-    postgresPassword: yK9sh6ff3UcYSrR4RsF2
+    postgresPassword: "yK9sh6ff3UcYSrR4RsF2"
     database: chatwoot_production
     # when existingSecret is defined auth.password, auth.PostgressPassword
     # is ignored.
@@ -144,7 +144,7 @@ redis:
   enabled: true
   nameOverride: chatwoot-redis
   auth:
-    password: ZUdaJckBGce1jZOZhKXV
+    password: "ZUdaJckBGce1jZOZhKXV"
     # when defined the password field is ignored
     #    existingSecret: secret-name
     #    existingSecretPasswordKey: ""
@@ -164,7 +164,7 @@ redis:
     persistence:
       enabled: true
       storageClass: "gp2"
-      size: 20Gi 
+      size: 20Gi
 
 # Provide affinity for hooks if needed
 hooks:
