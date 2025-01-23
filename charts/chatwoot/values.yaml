@@ -128,7 +128,7 @@ postgresql:
   nameOverride: chatwoot-postgresql
   auth:
     username: postgres
-    postgresPassword: postgres
+    postgresPassword: yK9sh6ff3UcYSrR4RsF2
     database: chatwoot_production
     # when existingSecret is defined auth.password, auth.PostgressPassword
     # is ignored.
@@ -144,7 +144,7 @@ redis:
   enabled: true
   nameOverride: chatwoot-redis
   auth:
-    password: redis
+    password: ZUdaJckBGce1jZOZhKXV
     # when defined the password field is ignored
     #    existingSecret: secret-name
     #    existingSecretPasswordKey: ""
@@ -210,7 +210,7 @@ env:
   REDIS_SENTINELS: ""
   REDIS_TLS: false
   S3_BUCKET_NAME: ""
-  SECRET_KEY_BASE: replace_with_your_super_duper_secret_key_base
+  SECRET_KEY_BASE: "e832576f3e0e2ffae06ef9c8ca183f99dac16f802494b383b556e8a870f466b6"
   SENTRY_DSN: ""
   SLACK_CLIENT_ID: ""
   SLACK_CLIENT_SECRET: ""
