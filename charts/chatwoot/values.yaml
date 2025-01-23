@@ -142,7 +142,7 @@ postgresql:
 
 redis:
   enabled: true
-  nameOverride: chatwoot-redis
+  fullnameOverride: chatwoot-redis
   auth:
     password: "ZUdaJckBGce1jZOZhKXV"
     # when defined the password field is ignored
