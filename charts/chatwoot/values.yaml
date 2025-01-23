@@ -161,6 +161,10 @@ redis:
       # If change pvc size redis.master.persistence.size: 20Gi
   replica:
     replicaCount: 1
+    persistence:
+      enabled: true
+      storageClass: "gp2"
+      size: 20Gi 
 
 # Provide affinity for hooks if needed
 hooks:
