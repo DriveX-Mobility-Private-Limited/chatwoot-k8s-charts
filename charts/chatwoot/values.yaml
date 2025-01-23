@@ -156,6 +156,8 @@ redis:
   master:
     persistence:
       enabled: true
+      storageClass: "gp2"
+      size: 20Gi
       # If change pvc size redis.master.persistence.size: 20Gi
   replica:
     replicaCount: 1
