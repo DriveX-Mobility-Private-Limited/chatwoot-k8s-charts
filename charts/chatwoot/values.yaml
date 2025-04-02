@@ -115,7 +115,7 @@ ingress:
     nginx.ingress.kubernetes.io/proxy-redirect-off: "true"
 spec:
   ingressClassName: nginx
-  hosts:
+  rules:
     - host: "crm.drivex.in"
       http:
         paths:
