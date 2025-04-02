@@ -96,6 +96,7 @@ service:
 
 ingress:
   enabled: true
+  ingressClassName: nginx
   # For Kubernetes >= 1.18 you should specify the ingress-controller via the field ingressClassName
   # See https://kubernetes.io/blog/2020/04/02/improvements-to-the-ingress-api-in-kubernetes-1.18/#specifying-the-class-of-an-ingress
   annotations:
@@ -113,19 +114,16 @@ ingress:
     nginx.ingress.kubernetes.io/client-max-body-size: "0"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "36000s"
     nginx.ingress.kubernetes.io/proxy-redirect-off: "true"
-spec:
-  ingressClassName: nginx
-  rules:
+  hosts:
     - host: "crm.drivex.in"
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: chatwoot
-                port:
-                  number: 3000
+      paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: chatwoot
+              port:
+                number: 3000
 
   tls:
    - secretName: chatwoot-prod-tls
