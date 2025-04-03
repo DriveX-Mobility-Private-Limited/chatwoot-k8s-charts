@@ -114,6 +114,8 @@ ingress:
     nginx.ingress.kubernetes.io/client-max-body-size: "0"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "36000s"
     nginx.ingress.kubernetes.io/proxy-redirect-off: "true"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+    https://chatbot-production.s3.ap-south-2.amazonaws.com;    
   hosts:
     - host: "crm.drivex.in"
       paths:
