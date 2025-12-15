@@ -142,6 +142,9 @@ affinity: {}
 postgresql:
   enabled: true
   nameOverride: chatwoot-postgresql
+  image:
+    repository: bitnamilegacy/postgresql
+    tag: 14.4.0-debian-11-r0  
   auth:
     username: postgres
     postgresPassword: "yK9sh6ff3UcYSrR4RsF2"
