@@ -159,6 +159,9 @@ postgresql:
 redis:
   enabled: true
   fullnameOverride: chatwoot-redis
+  image:
+    repository: bitnamilegacy/redis
+    tag: 6.2.7-debian-11-r3  
   auth:
     password: "ZUdaJckBGce1jZOZhKXV" 
     # when defined the password field is ignored
@@ -170,6 +173,8 @@ redis:
   # password: redis
   # port: 6379
   master:
+    image:
+      repository: bitnamilegacy/redis  
     persistence:
       enabled: true
       storageClass: "gp2"
@@ -177,6 +182,8 @@ redis:
       # If change pvc size redis.master.persistence.size: 20Gi
   replica:
     replicaCount: 1
+    image:
+      repository: bitnamilegacy/redis    
     persistence:
       enabled: true
       storageClass: "gp2"
